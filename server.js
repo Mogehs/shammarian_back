@@ -38,7 +38,7 @@ app.use("/api/comment", commentRouter);
 app.use("/api/stock", stockRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/purchases", purchasesRouter);
-app.listen(80, () => {
+app.listen(3000, () => {
   dbConnect();
   console.log(`Server is listening at http://localhost:${PORT}`);
 });
