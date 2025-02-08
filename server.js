@@ -22,6 +22,7 @@ app.use(cookieParser());
 app.use(
   cors({
     origin: "https://shammarian.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
 );
