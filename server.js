@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://shammarian.vercel.app/",
+    origin: "https://shammarian.vercel.app",
     credentials: true,
   })
 );
