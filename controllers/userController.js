@@ -59,6 +59,7 @@ export const signin = async (req, res) => {
 
     res.cookie("auth_token", token, {
       maxAge: 3600000,
+      sameSite: "Lax",
     });
 
     return res.status(200).json({
