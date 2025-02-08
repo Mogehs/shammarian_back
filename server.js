@@ -21,7 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://shammarian.vercel.app/", // Allows requests from any origin
+    origin: "*",
     credentials: true,
   })
 );
@@ -38,7 +38,7 @@ app.use("/api/comment", commentRouter);
 app.use("/api/stock", stockRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/purchases", purchasesRouter);
-app.listen(3000, () => {
+app.listen(PORT, () => {
   dbConnect();
   console.log(`Server is listening at http://localhost:${PORT}`);
 });
